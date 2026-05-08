@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Register</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <h1>Register</h1>
+    <form action="/auth/register" method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="joe@mail.com" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <button>Register</button>
+        <% if(errors.email){ %>
+            <p class="error"><%= errors.email %></p>
+        <% } %>
+        <% if(errors.password){ %>
+            <p class="error"><%= errors.password %></p>
+        <% } %>
+    </form>
+    <p>Already have an account? <a href="/auth/login">Login</a></p>
+  </body>
+</html>

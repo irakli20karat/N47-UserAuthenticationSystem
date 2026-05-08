@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <div class="bio">
+      <span class="bio-field"><h1>User:</h1><h1><%= bio.email.charAt(0).toUpperCase() + bio.email.split('@')[0].slice(1) %></h1></span>
+      <span class="bio-field"><h3>User ID:</h3><h3><%= bio.id %></h3></span>
+    </div>
+    <a href="/dashboard/logOut">Log out</a>
+    <a href="/dashboard/changePassword">Change Password</a>
+  </body>
+</html>
