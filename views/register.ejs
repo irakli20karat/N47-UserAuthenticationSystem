@@ -12,12 +12,17 @@
         <input type="email" name="email" id="email" placeholder="joe@mail.com" required>
         <label for="password">Password</label>
         <input type="password" name="password" id="password" required>
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" required>
         <button>Register</button>
         <% if(errors.email){ %>
             <p class="error"><%= errors.email %></p>
         <% } %>
         <% if(errors.password){ %>
             <p class="error"><%= errors.password %></p>
+        <% } %>
+        <% if(errors.confirmPassword){ %>
+            <p class="error"><%= errors.confirmPassword %></p>
         <% } %>
     </form>
     <p>Already have an account? <a href="/auth/login">Login</a></p>

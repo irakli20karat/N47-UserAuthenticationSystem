@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <div class="bio">
+      <span class="bio-field"><h1>User:</h1><h1><%= bio.userName %></h1></span>
+    </div>
+    <a href="/profile/logOut">Log out</a><br/>
+    <a href="/profile/changePassword">Change Password</a>
+  </body>
+</html>
