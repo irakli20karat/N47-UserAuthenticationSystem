@@ -3,12 +3,39 @@
   <head>
     <title>Dashboard</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/todos.css' />
   </head>
   <body>
     <%- include('partials/header') %>
     <div class="bio">
       <h1>This is a protected Dashboard page</h1>
-      <span class="bio-field"><h3>User ID:</h3><h3><%= bio.id %></h3></span>
+      <span class="bio-field"><h3>User ID:</h3><h3><%= id %></h3></span>
+    </div>
+    <hr/>
+    <div class="todos-section">
+      <div class="todos-form">
+        <form action="/dashboard/todo/create" method="POST">
+          <input type="text" id="title" name="title" placeholder="Title" required/>
+          <textarea id="description" name="description" placeholder="Description" required></textarea>
+          <button>Create TODO</button>
+        </form>
+      </div>
+      <div class="todos-list">
+        <% todos.forEach(todo => { %>
+          <div class="todo-wrapper">
+            <form action="/dashboard/todo/update" method="POST">
+                <input type="hidden" id="id" name="id" value="<%= todo._id %>"/>
+                <input type="text" id="title" name="title" value="<%= todo.title %>"/>
+                <textarea id="description" name="description"><%= todo.description %></textarea>
+                <div class="finished-row">
+                  <input type="checkbox" id="isFinished" name="isFinished" <%= todo.isFinished ? "checked" : "" %>/>
+                  <label for="isFinished">Finished</label>
+                </div>
+                <button>Update</button>
+            </form>
+          </div>
+        <% }) %>
+      </div>
     </div>
   </body>
 </html>

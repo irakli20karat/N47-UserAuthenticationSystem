@@ -1,0 +1,76 @@
+.todos-form form,
+.todo-wrapper form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 320px;
+}
+
+.todos-section {
+    margin-top: 20px;
+}
+
+.todos-form form {
+  margin-bottom: 32px;
+}
+
+.todo-wrapper {
+  padding: 14px;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #fafafa;
+}
+
+.todos-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+input[name="title"],
+textarea[name="description"] {
+  padding: 7px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  transition: border-color 0.15s;
+}
+
+input[name="title"]:focus,
+textarea[name="description"]:focus {
+  outline: none;
+  border-color: #00B7FF;
+}
+
+textarea[name="description"] {
+  height: 72px;
+  resize: vertical;
+}
+
+.finished-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+button {
+  padding: 7px;
+  font-size: 14px;
+  background: #00B7FF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background: #009fd9;
+}
