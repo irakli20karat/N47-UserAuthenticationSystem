@@ -7,7 +7,7 @@
 }
 
 .todos-section {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .todos-form form {
@@ -23,9 +23,9 @@
 }
 
 .todos-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 input[name="title"],
@@ -73,4 +73,43 @@ button {
 
 button:hover {
   background: #009fd9;
+}
+
+.timestamp-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-width: 2px;
+  border-color: #55555531;
+  border-top: 0;
+  border-inline: 0;
+  border-bottom: 1px;
+  border-style: solid;
+}
+
+.timestamp {
+  color: #00B7FF;
+  font-weight: 600;
+  margin: 0;
+}
+
+.delete-button {
+  margin-top: 4px;
+  background: #b4172f;
+}
+
+.delete-button:hover {
+  background: #e51736;
+}
+
+.todo-finished-text {
+  color: #555;
+}
+
+.todo-finished-button {
+  background: #555;
+}
+
+.todo-finished-button:hover {
+  background: #4a4a4a;
 }

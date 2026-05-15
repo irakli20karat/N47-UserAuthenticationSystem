@@ -39,4 +39,14 @@ router.post('/todo/update', async function (req, res) {
     }
 });
 
+router.post('/todo/delete', async function (req, res) {
+    try {
+        await Todo.deleteOne({ _id: req.body.id });
+
+        res.redirect('/dashboard');
+    } catch (error) {
+        res.status(400).redirect('/dashboard');
+    }
+});
+
 module.exports = router;
