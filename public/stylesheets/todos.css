@@ -105,11 +105,3 @@ button:hover {
 .todo-finished-text {
   color: #555;
 }
-
-.todo-finished-button {
-  background: #555;
-}
-
-.todo-finished-button:hover {
-  background: #4a4a4a;
-}

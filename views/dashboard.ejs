@@ -31,13 +31,13 @@
                 <textarea id="description" name="description"><%= todo.description %></textarea>
                 <div class="finished-row">
                   <input type="checkbox" id="isFinished" name="isFinished" <%= todo.isFinished ? "checked" : "" %>/>
-                  <label for="isFinished">Finished</label>
+                  <label>Finished</label>
                 </div>
-                <button class="<%= todo.isFinished ? 'todo-finished-button' : '' %>">Update</button>
+                <button>Update</button>
             </form>
             <form action="/dashboard/todo/delete" method="POST">
                 <input type="hidden" id="id" name="id" value="<%= todo._id %>"/>
-                <button class="delete-button <%= todo.isFinished ? 'todo-finished-button' : '' %>">Delete</button>
+                <button class="delete-button">Delete</button>
             </form>
           </div>
         <% }) %>
